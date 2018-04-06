@@ -1,9 +1,51 @@
-<style>
-div.absolute {
-    position: absolute;
-    right: 0px;
-    width: 300px;
-    border: 3px solid #0000;
-    padding: 10px;
+<form action="dolar.ticketduende.com.ve" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_live_guHMtWgAsqlVIWIuxu9BJ0hV"
+    data-amount="999"
+    data-name="The captain of your luck."
+    data-description="Valid for a ticket. After paying, fill out and save the receipt."
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto">
+
+curl https://api.stripe.com/v1/charges \
+   -u sk_live_Pwzc5PyPzzpB5D86ZXLgE6gT: \
+   -d amount=999 \
+   -d currency=usd \
+   -d description="Valid for a ticket. After paying, fill out and save the receipt." \
+   -d source=tok_7v4WxQLuyt2eNzI3HU3l8tLA
+-d statement_descriptor="Valid for a ticket. After paying, fill out and save the receipt." \
+   -d source=tok_sqXH3YJ6JDaMzmeXqPqhOiAM
+-d capture=false \
+   -d source=tok_IkwqqxjLpYWvj1WsNhch4SrJ
+-d metadata[order_id]=6735 \
+   -d source=tok_Z2ieE6IMS7dqKg05FT8vNmez
+-d source=tok_visa \
+-d receipt_email="Atention@elcapitandelasuerte.com.ve"
+...
+"outcome":
+{
+  network_status: "approved_by_network",
+  reason: null,
+  seller_message: "The charge was authorized.",
+  risk_level: "normal",
+  type: "authorized",
 }
-</style>
+...
+...
+"outcome":
+{
+  network_status: "declined_by_network",
+  type: "issuer_declined",
+  reason: "insufficient_funds",
+  risk_level: "elevated",
+  seller_message: "The card issuer declined to process this charge due to insufficient funds.",
+}
+...
+Stripe.api_key = "sk_live_Pwzc5PyPzzpB5D86ZXLgE6gT"
+charge = Stripe::Charge.retrieve(charge_id)
+charge.refunds.create(reason: 'fraudulent')
+refunded_charge = Stripe::Charge.retrieve(refunded_charge_id)
+refunded_charge.mark_as_fraudulent
+  </script>
+</form>
