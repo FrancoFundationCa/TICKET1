@@ -9,7 +9,7 @@
     data-locale="auto">
 
 curl https://api.stripe.com/v1/charges \
-   -u sk_live_Pwzc5PyPzzpB5D86ZXLgE6gT: \
+   -u pk_live_guHMtWgAsqlVIWIuxu9BJ0hV: \
    -d amount=332 \
    -d currency=usd \
    -d description="Valid for a ticket. After paying, fill out and save the receipt." \
@@ -42,7 +42,7 @@ curl https://api.stripe.com/v1/charges \
   seller_message: "The card issuer declined to process this charge due to insufficient funds.",
 }
 ...
-Stripe.api_key = "sk_live_Pwzc5PyPzzpB5D86ZXLgE6gT"
+Stripe.api_key = "pk_live_guHMtWgAsqlVIWIuxu9BJ0hV"
 charge = Stripe::Charge.retrieve(charge_id)
 charge.refunds.create(reason: 'fraudulent')
 refunded_charge = Stripe::Charge.retrieve(refunded_charge_id)
