@@ -1,1 +1,9 @@
-
+div.absolute {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    border: 3px solid #0000;
+    padding: 10px;
+}
+th=class="text-danger";
+th+td=class="text-center";
