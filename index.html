@@ -75,28 +75,44 @@ function googleTranslateElementInit() {
 	
 </head>
 <body oncontextmenu="return false">
-	<div class="field">
-  <div class="file is-danger has-name is-boxed">
-    <label class="file-label">
-      <input class="file-input" type="file" name="resume">
-      <span class="file-cta">
-        <span class="file-icon">
-          <i class="fas fa-cloud-upload-alt"></i>
-        </span>
-        <span class="file-label">
-          Up load, Centificate buy.
-        </span>
-      </span>
-    </label>
-  </div>
-<div class="row" style="margin-top: 50px;margin-bottom: 10px">
+	<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="First Name" id="first_name" type="text" class="validate">
+          <label for="first_name">First Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="last_name" type="text" class="validate">
+          <label for="last_name">Last Name</label>
+        </div>
+         <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Number of credit card" id="first_name" type="text" class="validate">
+          <label for="first_name">Number of credit card</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="field">
+            <div class="control">
+        <textarea class="textarea is-info" type="text" placeholder="Say us, Other charapter."></textarea>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 50px;margin-bottom: 10px">
                     <div class="btn-enter input-field col s60 m24">
                         <button class="btn btn-medium waves-effect waves-light g-recaptcha" accesskey="l" id="enviar"
                                 value="Entrar" tabindex="6" type="submit"
-                                data-sitekey="6LddmiwUAAAAAMHKeuJziZfrNBg4OPNKUHfuq8Yy" data-callback="onSubmit">Entrar
+                                data-sitekey="6LddmiwUAAAAAMHKeuJziZfrNBg4OPNKUHfuq8Yy" data-callback="onSubmit">Send
                         </button>
                     </div>
-</div>
+
+    </form>
+  </div>
 </Body>
 <Footer>
 </Footer>
