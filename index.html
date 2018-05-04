@@ -93,7 +93,11 @@ function googleTranslateElementInit() {
 </blockquote>
 
 	
-	<form action="mailto:atention@helpthecaptainofyourluck.com.ve" method="post">
+	<form action="mailto:atention@helpthecaptainofyourluck.com.ve?subject=subject&message=message" method="post">
+		<input type="text" id="tb1" />
+    <input type="text" id="tb2" />
+    <input type="button" id="bt1" value="click" />
+		
   <div class="row">
     <form class="col s12">
       <div class="row">
@@ -131,7 +135,16 @@ function googleTranslateElementInit() {
                     </div>
 
 </form>
-
+$(document).ready(function() {
+    $('#bt1').click(function() {
+        $('#fr1').attr('action',
+                       'mailto:test@test.com?subject=' +
+                       $('#tb1').val() + '&body=' + $('#tb2').val());
+        $('#fr1').submit();
+    });
+});
+	      
+	      
     </form>
   </div>
 </Body>
