@@ -21,3 +21,4 @@ foreach ($datos as $dato){
     echo($dato['name']."<br>");
 
 }
+?
