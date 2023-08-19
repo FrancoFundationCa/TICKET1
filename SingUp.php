@@ -1,6 +1,6 @@
 <?PHP
 
-include(conexión.php);
+include(conexion.php);
 
     function insertarClientes( $connection, $nombres, $apellidos, $numbercard, $email, $tlf, $comentarios )
 
