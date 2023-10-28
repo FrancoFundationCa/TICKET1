@@ -60,7 +60,6 @@ window.history.go.(-1);
 
 </script>'
 
-  pg_query_close($connection);
 
 };
 
